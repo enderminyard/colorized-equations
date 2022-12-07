@@ -1,0 +1,246 @@
+@font-face {
+	font-family: OldFrench;
+	src: url("/fonts/OldFrench-Light.woff") format("woff");
+	font-display: swap;
+	font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "OldFrench", serif;
+	line-height: 1;
+}
+
+:not(h1, h2, h3, h4, h5, h6, header) {
+	font-family: "Helvetica", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+code,
+pre {
+	font-family: monospace;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+p,
+details,
+summary,
+blockquote {
+	line-height: 1.75;
+}
+
+* {
+	box-sizing: border-box;
+}
+:root {
+	/* ↓ redundant */
+	font-size: 1rem;
+}
+p {
+	/* ↓ also redundant */
+	font-size: 1rem;
+}
+h2 {
+	/* ↓ 2.5 × the root font-size */
+	font-size: 2.5rem;
+}
+
+@media (min-width: 960px) {
+	:root {
+		/* ↓ Upscale by 25% at 960px */
+		font-size: 125%;
+	}
+}
+
+h3 {
+	font-size: 2rem;
+}
+
+* {
+	max-inline-size: 60ch;
+}
+html,
+body,
+div,
+header,
+nav,
+main,
+footer {
+	max-inline-size: none;
+}
+
+p {
+	margin-bottom: 1.5rem;
+}
+
+@media print {
+	body > *:not(main) {
+		display: none;
+	}
+}
+
+main {
+	max-width: 60rem;
+}
+
+@media (min-width: 120rem) {
+	html {
+		font-size: 150%;
+	}
+}
+
+p {
+	line-height: 1.5;
+}
+
+header > h1 > * {
+	font-family: "OldFrench";
+}
+
+
+a:focus {
+	outline: none;
+	background-color: var(--gray-2);
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+	white-space: nowrap;
+}
+
+li,
+dt,
+dd,
+br,
+th,
+td {
+	margin-top: 0;
+}
+
+body {
+	width: min(100% - 3rem, var(--container-max, 60ch));
+	margin-inline: auto;
+}
+
+header {
+	height: max-content;
+}
+
+.one {
+	border: var(--border-size-1) solid var(--gray-5);
+	border-radius: var(--size-1);
+	padding: var(--size-5);
+	margin-right: var(--size-1);
+}
+
+button:hover {
+	box-shadow: var(--shadow-3);
+	cursor: pointer;
+}
+
+button:active {
+	animation: var(--animation-float);
+	box-shadow: var(--shadow-5);
+	cursor: pointer;
+}
+
+.skip-to-main-content-link {
+	position: absolute;
+	left: -9999px;
+	z-index: 999;
+	padding: 1em;
+	background-color: black;
+	color: white;
+	opacity: 0;
+}
+.skip-to-main-content-link:focus {
+	left: 50%;
+	transform: translateX(-50%);
+	opacity: 1;
+}
+
+.flex {
+	display: flex;
+	flex-direction: row;
+	overflow-y: scroll;
+	padding-bottom: var(--size-4);
+	padding-left: 0;
+	margin-bottom: 0;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+textarea {
+	width: 100%;
+}
+
+#colorMenu {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	padding-left: 0;
+}
+
+#colorMenu > button {
+	width: 100%;
+	min-height: var(--size-4);
+	border: var(--border-size-1) solid white;
+
+}
+
+#black {
+	background-color: #393732;
+}
+#green {
+	background-color: #669e71;
+}
+#purple {
+	background-color: #8176cc;
+}
+#orange {
+	background-color: #cc5f43;
+}
+#pink {
+	background-color: #c75a93;
+}
+
+#draw {
+	display: flex;
+	border: var(--border-size-1) solid var(--gray-6);
+	padding: 0;
+}
+
+ #download {
+	appearance: none;
+	border: transparent;
+	background-color: transparent;
+	border-radius: var(--size-1);
+	font-size: var(--font-size-1);
+	font-weight: bold;
+	margin: var(--size-1) 0;
+	padding: var(--size-1);
+	border: var(--border-size-1) solid var(--gray-6);
+	background-color: var(--gray-7);
+	color: var(--gray-1);
+}
+
+html,
+body {
+	height: 100%;
+}
+
+#draw > div {
+	background-color: lavenderblush;
+}
